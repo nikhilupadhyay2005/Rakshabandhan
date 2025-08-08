@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikhil Upadhyay - My Journey</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to right, #000000, #1f1c2c);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeIn 2s forwards;
+      animation-delay: 1s;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .typing {
+      font-size: 1.5rem;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      opacity: 0;
+      animation: fadeText 2s forwards;
+      animation-delay: 5s;
+      max-width: 700px;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeText {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .typing {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Replace "nikhil.jpg" with your own image filename -->
+    <img src="Upadhyay.jpg" alt="Nikhil Upadhyay" class="profile-img" />
+    
+    <h1>Hello, I'm</h1>
+    <div class="typing">Nikhil Upadhyay — Software Engineer</div>
+    <p>
+      I wasn't born with all the answers, but I was born with the courage to find them.  
+      From late-night coding sessions to early morning lectures, every moment has been a step forward.  
+      Coming from a background where resources were limited, but dreams were limitless — I taught myself,  
+      I pushed through failures, and I turned every 'no' into motivation.  
+      I'm not just a developer — I’m a believer, a doer, and a dreamer building his future one line of code at a time.
+    </p>
+  </div>
+</body>
+</html>
